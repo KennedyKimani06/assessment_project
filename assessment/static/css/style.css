@@ -2,39 +2,89 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
     color: #333;
+    background-color: #f4f4f4;
 }
 
-nav ul {
+header, footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.navbar {
     list-style: none;
     display: flex;
     justify-content: center;
-    background: #333;
-    padding: 10px;
+    padding: 10px 0;
 }
 
-nav ul li {
+.navbar li {
     margin: 0 15px;
 }
 
-nav ul li a {
+.navbar a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
-main {
-    padding: 20px;
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #eaeaea;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.contact-form, .feature-grid, .project-grid {
     max-width: 800px;
     margin: auto;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    text-align: center;
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
     padding: 10px;
-    background: #333;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .cta-button, button {
+        width: 100%;
+    }
 }

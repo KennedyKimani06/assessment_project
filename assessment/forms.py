@@ -6,8 +6,7 @@ class ContactForm(forms.ModelForm):
         model = Contact
         fields = ['name', 'email', 'phone', 'message']
 
-    def clean_message(self):
-        message = self.cleaned_data.get('message')
-        if len(message) < 100:
-            raise forms.ValidationError("Message must be at least 100 characters.")
-        return message
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs.update({"class": "form-control"})

@@ -1,10 +1,33 @@
 {% extends "assessment/base.html" %}
 {% block title %}Contact{% endblock %}
 {% block content %}
-<h1>Contact Me</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
-</form>
+<div class="container">
+    <div class="text-center mb-4">
+        <h1>Contact Me</h1>
+        <p>If you have any questions or project ideas, feel free to reach out through the form below.</p>
+    </div>
+
+    <form method="POST" class="row g-3">
+        {% csrf_token %}
+        <div class="col-md-6">
+            <label for="id_name" class="form-label">Name</label>
+            {{ form.name }}
+        </div>
+        <div class="col-md-6">
+            <label for="id_email" class="form-label">Email</label>
+            {{ form.email }}
+        </div>
+        <div class="col-md-6">
+            <label for="id_phone" class="form-label">Phone</label>
+            {{ form.phone }}
+        </div>
+        <div class="col-12">
+            <label for="id_message" class="form-label">Message</label>
+            {{ form.message }}
+        </div>
+        <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+        </div>
+    </form>
+</div>
 {% endblock %}

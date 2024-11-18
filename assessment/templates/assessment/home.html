@@ -1,6 +1,27 @@
 {% extends "assessment/base.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
-<h1>Welcome to My Portfolio</h1>
-<p>This is the homepage. Explore the site using the navigation links.</p>
+<section class="text-center">
+    <h1 class="display-4">Welcome to My Portfolio</h1>
+    <p class="lead">Discover my skills, explore my projects, and let’s create amazing things together.</p>
+    <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Get in Touch</a>
+</section>
+
+<section class="mt-5">
+    <h2 class="text-center">What I Offer</h2>
+    <div class="row text-center mt-4">
+        <div class="col-md-4">
+            <h3>Web Development</h3>
+            <p>Building modern, scalable, and responsive websites tailored to your needs.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>UI/UX Design</h3>
+            <p>Creating visually appealing and user-centered designs for digital experiences.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Problem Solving</h3>
+            <p>Developing creative solutions to complex challenges with innovative ideas.</p>
+        </div>
+    </div>
+</section>
 {% endblock %}
